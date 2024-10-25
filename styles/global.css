@@ -23,4 +23,19 @@
 
 body {
     overflow: hidden;
+
+    font: var(--text);
+    color: var(--text-secondary);
+}
+
+h1, h2{
+    color: var(--text-primary);
+}
+
+h1 .destaque{
+    color: #E43A12;
+}
+
+img {
+    max-width: 100%;
 }
