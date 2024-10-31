@@ -1,34 +1,38 @@
-.dropzone {
+.droparea-wrapper {
     border: 1px dashed var(--stroke-default);
     border-radius: .25rem;
-
     display: grid;
     justify-items: center;
     gap: .5rem;
-
     text-align: center;
     padding: 1.75rem 1rem;
-
     position: relative;
-    & input {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        inset: 0;
-        opacity: 0;
-    }
+    width: 100%;
 
-    & p {
-        color: #A8A29E;
-    }
+    margin-bottom: 30px;
+}
 
-    &:hover, &:has(input:focus) {
-        border-width: 2px;
-        border-color: var(--stroke-highlight); /* Corrigi a variável aqui */
-        background-color: var(--surface-secondary);
+.droparea-wrapper input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
 
-        & p {
-            color: var(--text-tertiary);
-        }
-    }
+.droparea-wrapper p {
+    color: #A8A29E;
+}
+
+.droparea-wrapper:hover,
+.droparea-wrapper:has(input[type="file"]:focus) {
+    border-width: 2px;
+    border-color: var(--stroke-highlight);
+    background-color: var(--surface-secondary);
+}
+
+.droparea-wrapper:hover p,
+.droparea-wrapper:has(input[type="file"]:focus) p {
+    color: var(--text-tertiary);
 }

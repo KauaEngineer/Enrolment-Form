@@ -25,3 +25,7 @@ fieldset + fieldset{
     display: flex;
     gap: 1rem;
 }
+
+.select-wrapper{
+    width: 100%;
+}
